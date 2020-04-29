@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Portmanteau</title>
+	<!-- Title Icon (Enter downloaded filename in href) -->
+	<link rel="shortcut icon" type="image/x-icon" href="filename" /> 
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- External CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Javascript File -->
+	<script type="text/javascript" src="JSfile.js"></script>
+	
+	<!-- Font-Awesome(5) Icons -->
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+<body>
+
+	<div class="top_bar">
+		<h3 class="mx-3">Portmanteau Generator</h3>
+	</div>
+
+	<div class="w-100">
+		<div class="in_strings">
+			<input type="text" name="string_1" placeholder="Enter string 1" id="string1" class="mx-3" />
+			<span><i id="swap-icon" title="swap strings" class="fas fa-sync-alt" onclick="swap_strings()"></i></span>
+			<input type="text" name="string_2" placeholder="Enter string 2" id="string2" class="mx-3" />
+		</div>
+			
+		<div class="slidecontainer">
+		  <h5 class="mx-3">Set Length:</h5>	
+		  <input type="range" min="0" max="20" step="1" value="20" class="slider" id="myRange">
+		  <span id="demo" class="mx-3"></span>
+		</div>
+
+		<div class="out_strings">
+			<h5 class="float-left mx-3 my-2">Output String:</h5>
+			<p id="str_out" style="font-size: 25px;"></p>
+		</div>
+
+		<div class="btns">
+			<button type="submit" class="reset_btn" onclick="reset()">Reset</button>
+			<button type="submit" class="sub_btn" onclick="submit()">Submit</button>
+		</div>
+	</div>	
+
+	<div class="about">
+		<h5>About</h5>
+		<ul>
+			<li>This string generator combines two strings to produce interesting portmanteaus.</li>
+			<li>A portmanteau word is a linguistic blend of words, in which parts of multiple words or their phones (sounds) are combined into a new word.</li>
+			<li> Example: smog, coined by blending smoke and fog; motel, from motor and hotel; Liger, from Lion and Tiger</li>
+			<li>This generator parts the given strings around the vowels present. These are syllables of the word.</li>
+			<li>Output string is produced by combining prefix of string 1 and suffix of string 2.</li>
+			<li>LENGTH: drag the ranger to adjust length.</li>
+			<li>RESET: resets all the strings.</li>
+			<li>SUBMIT: press everytime after changing the length.</li>
+		</ul>
+		
+	</div>
+		
+</body>
+</html>
